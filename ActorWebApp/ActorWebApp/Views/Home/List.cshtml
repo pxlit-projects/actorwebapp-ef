@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Actor>
+@{
+   ViewData["Title"] = "Actor List Page";
+}
+
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Profile Picture</th>
+            <th scope="col">Actor</th>
+            <th scope="col">BirthYear</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var actor in Model)
+        {
+        
+        <tr>
+            <td><img src="@actor.ProfilePictureUrl" class="img-thumbnail" width="100"></td>
+            <td>@actor.LastName</td>
+            <td>@actor.BirthYear</td>
+        </tr>
+        
+        }
+    </tbody>
+</table>
+
